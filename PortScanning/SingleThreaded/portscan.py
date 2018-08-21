@@ -12,7 +12,8 @@ socket.setdefaulttimeout(.5)
 
 """
 @ Author: Kai Bernardini
-Single threaded port scanner. I take no responsibility for any missuse.
+Single threaded port scanner. I take no responsibility for any missuse. See
+License for more details.
 
 Example Usage:
 $ python3 portscan.py  hackthissite.org
@@ -69,7 +70,7 @@ def main():
     try:
         # could use use a more pythonic  line
         # return filter(map(port_scan))
-        for port in tqdm(range(1,1025)):
+        for port in tqdm(range(1,1024)):
             is_open = port_scan(target, port)
             open_ports.append(is_open)
 
